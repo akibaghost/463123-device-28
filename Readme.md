@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Александр Назаров](https://up.htmlacademy.ru/htmlcss/28/user/463123).
-* Наставник: `Владислав Кривокора`(https://htmlacademy.ru/profile/krivokora).
+* Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
