@@ -8,13 +8,34 @@
     <header> <!-- шапка сайта -->
       <a href="index.html"><img src="img/logo-device.svg" width="165" height="35"></a> <!-- логотип -->
       <input type="search" name="search-into-site" value="Поиск по сайту">
-      <a href="login.html">Войти</a>
+      <a href="">Валентин Петухов</a>
+      <a href="">Выйти</a>
       <a href="">Сравнить</a>
       <a href="">Корзина</a>
       <nav> <!-- навигационное меню в шапке -->
         <ul>
           <li>
             <a href="catalog.html">Каталог товаров</a><span>+</span>
+            <ul> <!--Вложенное меню с каталогом товаров -->
+              <li>
+                <a href="">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a href="">Квадрокоптеры</a>
+              </li>
+              <li>
+                <a href="">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="">Умные часы</a>
+              </li>
+              <li>
+                <a href="">Экшн-камеры</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="">Доставка</a>
@@ -30,7 +51,7 @@
     </header>
     <main>
       <section> <!--Меню с хлебными крошками -->
-        <h2>Моноподы для селфи</h2>
+        <h2 class="visually-hidden">Моноподы для селфи</h2> <!--Скрытый заголовок -->
         <ul>
           <li>
             <a href="">Главная</a>
@@ -44,11 +65,59 @@
         </ul>
       </section>
       <section> <!--Каталог с товарами -->
-        <h2>Каталог с товарвами</h2> <!--Скрытый заголовок-->
+        <h2 class="visually-hidden">Каталог с товарвами</h2> <!--Скрытый заголовок-->
         <span>Фильтр:</span>
-        <!--Здесь будет размечена форма с фильтром по товарам-->
-        <span>Стоимость:</span>
-        <input type="range" name="cost-range" min="0" max="5000"  value="0"> <!--Ползунок с фильтром цены -->
+        <form action="https://echo.htmlacademy.ru/" method="post"> <!-- Форма для фильтра товаров -->
+          <span>Стоимость:</span>
+          <input type="range" name="cost-range" min="0" max="5000"  value="0"> <!--Ползунок с фильтром цены -->
+          <fieldset>
+            <legend>Цвет</legend>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" name="black" checked>
+                  Черный
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="white">
+                  Черный
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="blue" checked>
+                  Синий
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="red" checked>
+                  Красный
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="pink">
+                  Розовый
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+              <label>
+                <input type="radio" name="bluetooth">
+                Есть
+              </label>
+              <label>
+                <input type="radio" name="bluetooth">
+                Нет
+              </label>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
         <section> <!-- сортировка -->
           <span>Сортировка: </span>
           <ul>
@@ -125,7 +194,7 @@
     </main>
     <footer> <!-- Подвал -->
       <a href="index.html"><img src="img/logo-device.svg" width="165" height="35"></a> <!-- логотип -->
-      <a href="">Валентин петухов</a>
+      <a href="">Валентин Петухов</a>
       <a href="">Выйти</a>
       <a href="">Сравнить</a>
       <a href="">Корзина</a>
@@ -147,7 +216,7 @@
       </nav>
       <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <section> <!--список социаальных сетей -->
-        <h2>Найди нас в социальных сетях!</h2> <!--скрытыий заголовок -->
+        <h2 class="visually-hidden">Найди нас в социальных сетях!</h2> <!--скрытыий заголовок -->
         <ul>
           <li>
             <a href="">Facebook</a>

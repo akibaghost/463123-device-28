@@ -15,6 +15,26 @@
         <ul>
           <li>
             <a href="catalog.html">Каталог товаров</a><span>+</span>
+            <ul> <!--Вложенное меню с каталогом товаров -->
+              <li>
+                <a href="">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a href="">Квадрокоптеры</a>
+              </li>
+              <li>
+                <a href="">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="">Умные часы</a>
+              </li>
+              <li>
+                <a href="">Экшн-камеры</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="">Доставка</a>
@@ -96,7 +116,7 @@
     </header>
     <main>
       <section> <!-- раздел "Популярные категории товаров" -->
-        <h2>Популярные категории товаров</h2> <!-- скрытый заголовок -->
+        <h2 class="visually-hidden">Популярные категории товаров</h2> <!-- скрытый заголовок -->
         <ul> <!-- карточки с категориями -->
           <li>
             <a href="">
@@ -140,7 +160,7 @@
         <div>
           <!-- С помощью этого div отрисуем фигуру курьера справа от списка -->
         </div>
-        <h2>Сервисы компании</h2> <!-- скрытый заголовок -->
+        <h2 class="visually-hidden">Сервисы компании</h2> <!-- скрытый заголовок -->
          <ul>
            <li>
              <span>Доставка</span>
@@ -169,7 +189,7 @@
          </ul>
       </section>
       <section> <!-- раздел с представленными брендами -->
-        <h2>Представленные бренды</h2> <!-- скрытый заголовок -->
+        <h2 class="visually-hidden">Представленные бренды</h2> <!-- скрытый заголовок -->
         <ul> <!-- ссылки будут отрисованы в качестве изображений -->
           <li>
             <a href="http://dji.com">
@@ -223,7 +243,7 @@
           проверить работоспособность покупки. Всякое бывает.
         </p>
         <a href=""> <!--изображение с картой -->
-          <img src="img/map.jpg" width="560" height="222" alt="Адрес компании">
+          <img src="img/map.jpg" width="560" height="222" alt="Адрес компании: г. Москва, ул. Строителей, 15">
         </a>
         <a href="">Напишите нам</a>
       </section>
@@ -251,6 +271,7 @@
       </nav>
       <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         <ul>  <!--список социальных сетей -->
+          <h2 class="visually-hidden">Найди нас в социальных сетях!</h2> <!--скрытыий заголовок -->
           <li>
             <a href="">Facebook</a>
           </li>
@@ -263,5 +284,21 @@
         </ul>
       <a href="http://htmlacademy.ru"></a> <!-- иконка с HTML Academy -->
     </footer>
+    <section> <!-- Popup: форма обратной связи. Теги <br> временные, позже позиция элементов будет реализована с помощью CSS -->
+      <button type="button" aria-label="Закрыть форму обратной связи"></button>
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <label for="field-name">Ваше имя:</label>
+        <input type="text" id="field-name" name="name" placeholder="Имя Фамилия"><br>
+        <label for="field-email">Ваш e-mail:</label>
+        <input type="email" id="field-email" name="email" placeholder="email@example.com"><br>
+        <label for="field-message">Текст письма: </label><br>
+        <textarea id="field-message" name="message" rows="8" cols="80" placeholder="В свободной форме"></textarea><br>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+    <section> <!-- Popup: карта -->
+      <button type="button" aria-label="Закрыть карту с адресом"></button>
+      <img src="img/map.jpg" alt="Карта с адресом: г. Москва, ул. Строителей, 15">
+    </section>
   </body>
 </html>
