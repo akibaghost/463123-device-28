@@ -6,7 +6,7 @@
   </head>
   <body>
     <header> <!-- шапка сайта -->
-      <a href="index.html"><img src="img/logo-device.svg" width="165" height="35"></a> <!-- логотип -->
+      <a href="index.html"><img src="img/logo-device.svg" width="165" height="35" alt="Логотип DEVICE"></a> <!-- логотип -->
       <input type="search" name="search-into-site" value="Поиск по сайту">
       <a href="">Валентин Петухов</a>
       <a href="">Выйти</a>
@@ -122,17 +122,18 @@
           <span>Сортировка: </span>
           <ul>
             <li>
-              <p>По цене</p>
+              <button type="button" name="sort-by-price" alt="Сортировать по цене">По цене</button>
             </li>
             <li>
-              <p>По типу</p>
+              <button type="button" name="sort-by-type" alt="Сортировать по типу">По типу</button>
             </li>
             <li>
-              <p>По популярности</p>
+              <button type="button" name="sort-by-popular" alt="Сортировать по популярности">По популярности</button>
             </li>
           </ul>
-          <span>▲</span> <!-- Здесь отриусем с помощью CSS треугольники -->
-          <span>▼</span>
+           <!-- Здесь отриусем с помощью CSS треугольники -->
+          <button type="button" name="button-ascending" aria-label="Сортировать по возрастанию">▲</button>
+          <button type="button" name="button-desceding" aria-label="Сортировать по убыванию">▼</button>
         </section>
           <section> <!-- Список товаров -->
             <ul>
@@ -173,19 +174,19 @@
             <div> <!-- навигация по каталогу -->
                 <ul>
                   <li>
-                    <button type="button" name="prev" disabled>Назад</button>
+                    <button type="button" name="prev" disabled aria-label="К предыдущей странице товаров">Назад</button>
                   </li>
                   <li>
-                    <a href="">1</a>
+                    <a href="" aria-label="страница с товарами 1">1</a>
                   </li>
                   <li>
-                    <a href="">2</a>
+                    <a href="" aria-label="страница с товарами 2">2</a>
                   </li>
                   <li>
-                    <a href="">3</a>
+                    <a href="" aria-label="страница с товарами 3">3</a>
                   </li>
                   <li>
-                    <button type="button" name="next">Вперед</button>
+                    <button type="button" name="next" aria-label="К следующей странице товаров">Вперед</button>
                   </li>
                 </ul>
             </div>
@@ -193,7 +194,7 @@
       </section>
     </main>
     <footer> <!-- Подвал -->
-      <a href="index.html"><img src="img/logo-device.svg" width="165" height="35"></a> <!-- логотип -->
+      <a href="index.html"><img src="img/logo-device.svg" width="165" height="35" alt="Логотип DEVICE"></a> <!-- логотип -->
       <a href="">Валентин Петухов</a>
       <a href="">Выйти</a>
       <a href="">Сравнить</a>
