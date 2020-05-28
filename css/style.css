@@ -1,0 +1,473 @@
+/*Кастомные свойства и глобальные стили*/
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-white: #FFFFFF;
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+  --special-yellow: #F7E296;
+  --special-green: #91C92F;
+  --special-yellow-dark: #F0C52E;
+  --status-pink: #F6DADA;
+}
+
+
+body { margin: 0; max-width: 1440px; }
+*, *::before, *::after { box-sizing: border-box; }
+a {text-decoration: none; }
+
+.wrapper {
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans'; /* Задаем Open Sans в общем контейнере, т.к он чаще всего будет встречаться  */
+  font-weight: 300;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+/* Стилизация шапки */
+
+.header-wrapper {
+  background-color: var(--special-yellow);
+}
+
+.header-wrapper a {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.header-search-bar {
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 20px;
+  background: none; /*отключение стандартного фона для input */
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  border: none;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+
+
+/* шапка: стилизация иконок для ссылок */
+.icon-user::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  background-image: url(../img/user.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.icon-compare::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  background-image: url(../img/compare.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.icon-cart::before {
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  background-image: url(../img/cart.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+
+.header-navigation-menu {
+  list-style: none;
+
+}
+
+.header-navigation-menu-list-item a {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.icon-plus::after {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url(../img/plus.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.3;
+
+}
+
+.header-navigation-submenu {
+  display: none;
+}
+
+
+/*Стилизация разделов "О нас", "Контакты"*/
+
+.about-us-header {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.about-us p {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.about-us-list {
+  list-style: none;
+}
+
+.about-us-list-item a {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--basic-black);
+}
+
+.about-us-list-item::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-image: url(../img/list-item.svg);
+  margin-bottom: 4px;
+  margin-right: 24px;
+}
+
+.about-us-details {
+  position: relative;
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+
+
+.contacts-header {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.contacts p {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+.map-image {
+  display: block;
+}
+
+.contacts-write-us {
+  position: relative;
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/*Стилизация подвала*/
+
+.footer {
+  background-color: var(--basic-dark);
+}
+
+.footer a {
+  color: var(--basic-white);
+}
+
+.footer-menu-link {
+  font-size: 15px;
+  line-height: 20px;
+  opacity: 0.7;
+
+}
+
+.footer-address {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.footer-navigation-menu {
+  list-style: none;
+}
+
+.footer-social-list {
+  list-style: none;
+}
+
+.footer-navigation-menu-item {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.icon-facebook {
+  background-image: url(../img/fb.svg);
+
+}
+
+.icon-instagram {
+  background-image: url(../img/instagram.svg);
+}
+
+.icon-twitter {
+  background-image: url(../img/twitter.svg);
+}
+
+.icon-html-academy {
+  display: inline-block;
+  width: 27px;
+  height: 34px;
+  background-image: url(../img/logo-html.svg);
+}
+
+.footer-logo-device {
+  fill: var(--special-yellow-dark);
+}
+
+.footer-address {
+  font-size: 15px;
+  line-height: 20px;
+  font-style: normal;
+  color: var(--basic-white);
+}
+
+
+/*Стилизация страницы catalog.html */
+
+/*Стилизация секции с хлебными крошками */
+
+.breadcrumb-menu-header {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.breadcrumb-menu-list {
+  list-style: none;
+}
+
+.breadcrumb-menu-list-item {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.breadcrumb-menu-list-item::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/nav-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/*Стилизация списка товаров*/
+
+.product-list {
+  list-style: none;
+}
+
+.product-description {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.product-price {
+  font-family: 'Gilroy';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+/*стилизация фильтра товаров */
+
+.product-filter-form {
+  background-color: var(--basic-grey-light);
+}
+
+.product-filter-form fieldset {
+  border: none;
+}
+
+.product-filter-color {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.product-filter-color-list {
+  list-style: none;
+}
+
+
+
+.product-filter-color-list-label {
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  padding-left: 42px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+input:checked + .product-filter-color-list-label {
+    background-image: url(../img/checkbox-on.svg);
+}
+
+
+.product-filter-bluetooth {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.product-bluetooth-label {
+  display: inline-block;
+  height: 26px;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+  padding-left: 32px;
+}
+
+input:checked + .product-bluetooth-label {
+  background-image: url(../img/radio-on.svg);
+}
+
+.product-filter-show {
+  position: relative;
+  background: none; /*отключение стандартного фона у button*/
+  border: none; /*отключение стандартных рамок у button*/
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+
+
+
+/*Стилизация popup */
+
+.popup-feedback, .popup-map {
+  display: none;
+}
+
+
+/*Стилизация состояний*/
+
+.header a:hover {
+  opacity: 0.6;
+}
+
+.header a:active {
+  opacity: 0.3;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+.footer a:active {
+  opacity: 0.3;
+}
+
+.social-icon:hover {
+    opacity: 0.6;
+}
+
+.social-icon:active {
+  opacity: 0.1;
+}
+
+.hover-effect:hover {
+  background-color: var(--special-yellow-dark);
+}
+
+.hover-effect:active {
+  background-color: var(--basic-black);
+  color: var(--special-yellow);
+}
+
+
+.header-search-bar:hover {
+  opacity: 0.6;
+}
+
+
+.header-search-bar:focus {
+  outline: none; /*отключение стандартного outline в фокусе для input*/
+  border-bottom: 2px solid var(--basic-black);
+  opacity: 1;
+}
+
+.icon-html-academy:hover {
+  opacity: 0.6;
+}
