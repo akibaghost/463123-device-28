@@ -71,12 +71,14 @@
         </section>
         <section> <!--Каталог с товарами -->
           <h2 class="visually-hidden">Каталог с товарами</h2> <!--Скрытый заголовок-->
-          <span>Фильтр:</span>
+          <span class="filter-text">Фильтр:</span>
           <form class="product-filter-form" action="https://echo.htmlacademy.ru/" method="post"> <!-- Форма для фильтра товаров -->
-            <span>Стоимость</span>
-            <input type="range" name="cost-range" min="0" max="5000"  value="0"> <!--Ползунок с фильтром цены -->
+            <span class="product-filter-header">Стоимость</span>
+            <input class="cost-range" type="range" name="cost-range" min="0" max="5000"  value="0"><br> <!--Ползунок с фильтром цены -->
+            <span class="cost-range-value">от 0</span>
+            <span class="cost-range-value">от 5000</span>
             <fieldset>
-              <legend class="product-filter-color">Цвет</legend>
+              <legend class="product-filter-header">Цвет</legend>
               <ul class="product-filter-color-list">
                 <li>
                   <input class="visually-hidden" id="product-color-black" type="checkbox" name="black" checked><label class="product-filter-color-list-label" for="product-color-black">Черный</label>
@@ -96,28 +98,33 @@
               </ul>
             </fieldset>
             <fieldset>
-              <legend class="product-filter-bluetooth">Bluetooth</legend>
+              <legend class="product-filter-header">Bluetooth</legend>
               <input class="visually-hidden" type="radio" name="bluetooth" value="bluetooth-on" id="bluetooth-on" checked><label class="product-bluetooth-label" for="bluetooth-on">Есть</label>
               <input class="visually-hidden" type="radio" name="bluetooth" value="bluetooth-off" id="bluetooth-off"><label class="product-bluetooth-label" for="bluetooth-off">Нет</label>
             </fieldset>
             <button type="submit" class="product-filter-show hover-effect">Показать</button>
           </form>
-          <section> <!-- сортировка -->
-            <span>Сортировка: </span>
-            <ul>
+          <section class="sort"> <!-- сортировка -->
+            <ul class="sort-list">
               <li>
-                <button type="button" name="sort-by-price" alt="Сортировать по цене">По цене</button>
+                <span class="filter-text">Сортировка:</span>
               </li>
               <li>
-                <button type="button" name="sort-by-type" alt="Сортировать по типу">По типу</button>
+                <button class="sort-button" type="button" name="sort-by-price" alt="Сортировать по цене">По цене</button>
               </li>
               <li>
-                <button type="button" name="sort-by-popular" alt="Сортировать по популярности">По популярности</button>
+                <button class="sort-button" type="button" name="sort-by-type" alt="Сортировать по типу" disabled>По типу</button>
+              </li>
+              <li>
+                <button class="sort-button" type="button" name="sort-by-popular" alt="Сортировать по популярности" disabled>По популярности</button>
+              </li>
+              <li>
+                <a href="" name="sort-ascending" aria-label="Сортировать по возрастанию">▲</a>
+              </li>
+              <li>
+                <a href="" name="sort-desceding" aria-label="Сортировать по убыванию">▼</a>
               </li>
             </ul>
-             <!-- Здесь отриусем с помощью CSS треугольники -->
-            <a href="" name="sort-ascending" aria-label="Сортировать по возрастанию">▲</a>
-            <a href="" name="sort-desceding" aria-label="Сортировать по убыванию">▼</a>
           </section>
             <section> <!-- Список товаров -->
               <ul class="product-list">
@@ -156,7 +163,7 @@
                 </li>
               </ul>
               <div> <!-- навигация по каталогу -->
-                  <ul>
+                  <ul class="catalog-navigation-list">
                     <li>
                       <a name="prev" disabled aria-label="К предыдущей странице товаров">Назад</a>
                     </li>

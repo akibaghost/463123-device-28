@@ -7,7 +7,9 @@
   --basic-grey: #464646;
   --basic-half-grey: #7E7E7E;
   --basic-grey-light: #E5E5E5;
+  --basic-grey-semilight: #EBEBEB;
   --special-yellow: #F7E296;
+  --special-yellow-light: #F7E296;
   --special-green: #91C92F;
   --special-yellow-dark: #F0C52E;
   --status-pink: #F6DADA;
@@ -125,6 +127,145 @@ a {text-decoration: none; }
   display: none;
 }
 
+
+/*стилизация слайдера*/
+
+.slider {
+  list-style: none;
+}
+
+.slider-element-number {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 219px;
+  text-transform: uppercase;
+}
+
+.slider-element-header {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.slider-element-description {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.slider-table-detail {
+  font-family: 'Gilroy';
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+}
+
+.slider-table-detail-name {
+  font-family: 'Gilroy';
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.slider-element-get-details {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.slider-navigation {
+  list-style: none;
+}
+
+.slider-navigation-bullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/slider-button-empty.svg);
+  background-size: 100%;
+}
+
+.slider-navigation-bullet:first-child {
+  background-image: url(../img/slider-button.svg);
+}
+
+/*Стилизация раздела "Популярные категории товаров"*/
+
+.feature-products {
+  list-style: none;
+}
+
+.feature-product-image {
+  background-color: var(--special-yellow-light);
+}
+
+.feature-product-description {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+/*Стилизация раздела "Сервисы"*/
+
+.services-list {
+  list-style: none;
+}
+
+.service-header {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.service-item-description {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+}
+
+.service-item-selector {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.service-image-delivery {
+  width: 136px;
+  height: 164px;
+  background-image: url(../img/delivery.svg);
+}
+
+.service-image-warranty {
+  width: 171px;
+  height: 195px;
+  background-image: url(../img/warranty.svg);
+}
+
+.service-image-credit {
+  width: 156px;
+  height: 188px;
+  background-image: url(../img/credit.svg);
+}
+
+/*Раздел с представленными брендами*/
+
+.brands-list {
+  list-style: none;
+}
 
 /*Стилизация разделов "О нас", "Контакты"*/
 
@@ -320,6 +461,46 @@ a {text-decoration: none; }
   list-style: none;
 }
 
+.cost-range {
+  position: relative;
+  -webkit-appearance: none; /*Обнуляем стандартные стили input с type="range" */
+  width: 200px;
+  height: 2px;
+  background-color: var(--basic-black);
+}
+
+.cost-range::-webkit-slider-thumb {
+    -webkit-appearance: none; /*Обнуляем стандартные стили input с type="range" */
+}
+
+.cost-range::before {
+  position: absolute;
+  top: -9px;
+  content: '';
+  width: 94px;
+  height: 22px;
+  background-image: url(../img/filter-button.svg), url(../img/filter-button.svg);
+  background-repeat: no-repeat;
+  background-position: left, right;
+  z-index: 3;
+}
+
+.cost-range::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 94px;
+  height: 2px;
+  background-color: var(--special-green);
+}
+
+.cost-range-value {
+  font-size: 14px;
+  line-height: 16px;
+
+}
+
+
 .product-description {
   font-family: 'Gilroy';
   font-weight: 800;
@@ -338,6 +519,15 @@ a {text-decoration: none; }
 
 /*стилизация фильтра товаров */
 
+.filter-text {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .product-filter-form {
   background-color: var(--basic-grey-light);
 }
@@ -346,13 +536,14 @@ a {text-decoration: none; }
   border: none;
 }
 
-.product-filter-color {
+.product-filter-header {
   font-family: 'Gilroy';
   font-weight: 800;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.1em;
 }
+
 
 .product-filter-color-list {
   list-style: none;
@@ -373,15 +564,6 @@ a {text-decoration: none; }
 
 input:checked + .product-filter-color-list-label {
     background-image: url(../img/checkbox-on.svg);
-}
-
-
-.product-filter-bluetooth {
-  font-family: 'Gilroy';
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.1em;
 }
 
 .product-bluetooth-label {
@@ -411,8 +593,29 @@ input:checked + .product-bluetooth-label {
   z-index: 1;
 }
 
+.sort-list {
+  list-style: none;
+  background-color: var(--basic-grey-light);
+}
 
+.sort-button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  line-height: 19px;
+}
 
+.catalog-navigation-list {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  list-style: none;
+  background-color: var(--basic-grey-semilight);
+}
 
 /*Стилизация popup */
 
