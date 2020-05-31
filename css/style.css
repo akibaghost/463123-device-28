@@ -1,3 +1,41 @@
+/* Подключение Gilroy */
+@font-face {
+	font-family: 'Gilroy';
+	src:
+		url('../fonts/gilroyextrabold.woff2') format('woff2'),
+		url('../fonts/gilroyextrabold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src:
+		url('../fonts/gilroylight.woff2') format('woff2'),
+		url('../fonts/gilroylight.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src:
+       url('../fonts/opensans-light.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/opensans-light.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* Подключение Open Sans */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+       url('../fonts/opensans-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/opensans-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
 /*Кастомные свойства и глобальные стили*/
 
 :root {
@@ -24,7 +62,7 @@ a {text-decoration: none; }
   width: 1160px;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Open Sans'; /* Задаем Open Sans в общем контейнере, т.к он чаще всего будет встречаться  */
+  font-family: 'Open Sans', 'Verdana', sans-serif; /* Задаем Open Sans в общем контейнере, т.к он чаще всего будет встречаться  */
   font-weight: 300;
 }
 
@@ -103,7 +141,7 @@ a {text-decoration: none; }
 }
 
 .header-navigation-menu-list-item a {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -135,7 +173,7 @@ a {text-decoration: none; }
 }
 
 .slider-element-number {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 179px;
   line-height: 219px;
@@ -143,7 +181,7 @@ a {text-decoration: none; }
 }
 
 .slider-element-header {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -155,7 +193,7 @@ a {text-decoration: none; }
 }
 
 .slider-table-detail {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 300;
   font-size: 36px;
   line-height: 42px;
@@ -163,7 +201,7 @@ a {text-decoration: none; }
 }
 
 .slider-table-detail-name {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
@@ -171,7 +209,7 @@ a {text-decoration: none; }
 }
 
 .slider-element-get-details {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -206,7 +244,7 @@ a {text-decoration: none; }
 }
 
 .feature-product-description {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -219,7 +257,7 @@ a {text-decoration: none; }
 }
 
 .service-header {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -235,7 +273,7 @@ a {text-decoration: none; }
 }
 
 .service-item-selector {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -270,7 +308,7 @@ a {text-decoration: none; }
 /*Стилизация разделов "О нас", "Контакты"*/
 
 .about-us-header {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -287,7 +325,7 @@ a {text-decoration: none; }
 }
 
 .about-us-list-item a {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 22px;
   color: var(--basic-black);
@@ -305,7 +343,7 @@ a {text-decoration: none; }
 
 .about-us-details {
   position: relative;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -317,7 +355,7 @@ a {text-decoration: none; }
 
 
 .contacts-header {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -335,7 +373,7 @@ a {text-decoration: none; }
 
 .contacts-write-us {
   position: relative;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -348,6 +386,10 @@ a {text-decoration: none; }
 
 .footer {
   background-color: var(--basic-dark);
+}
+
+.footer-links-list {
+  list-style: none;
 }
 
 .footer a {
@@ -375,7 +417,7 @@ a {text-decoration: none; }
 }
 
 .footer-navigation-menu-item {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -427,7 +469,7 @@ a {text-decoration: none; }
 /*Стилизация секции с хлебными крошками */
 
 .breadcrumb-menu-header {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 47px;
@@ -502,7 +544,7 @@ a {text-decoration: none; }
 
 
 .product-description {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -510,7 +552,7 @@ a {text-decoration: none; }
 }
 
 .product-price {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 18px;
@@ -520,7 +562,7 @@ a {text-decoration: none; }
 /*стилизация фильтра товаров */
 
 .filter-text {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -537,7 +579,7 @@ a {text-decoration: none; }
 }
 
 .product-filter-header {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 14px;
   line-height: 17px;
@@ -584,7 +626,7 @@ input:checked + .product-bluetooth-label {
   position: relative;
   background: none; /*отключение стандартного фона у button*/
   border: none; /*отключение стандартных рамок у button*/
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -606,7 +648,7 @@ input:checked + .product-bluetooth-label {
 }
 
 .catalog-navigation-list {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
