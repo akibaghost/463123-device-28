@@ -43,6 +43,7 @@
   --basic-dark: #363636;
   --basic-white: #FFFFFF;
   --basic-grey: #464646;
+  --basic-grey-dark: #DCDCDC;
   --basic-half-grey: #7E7E7E;
   --basic-grey-light: #E5E5E5;
   --basic-grey-semilight: #EBEBEB;
@@ -76,10 +77,25 @@ a {text-decoration: none; }
   white-space: nowrap; /* added line */
 }
 
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
 /* Стилизация шапки */
 
 .header-wrapper {
-  background-color: var(--special-yellow);
+  display: flex;
+  flex-direction: column;
+  padding-top: 18px;
+  padding-left: 60px;
+  background: linear-gradient(to bottom,white 0%, transparent 21%,  var(--special-yellow) 21%);
 }
 
 .header-wrapper a {
@@ -88,18 +104,39 @@ a {text-decoration: none; }
   color: var(--basic-black);
 }
 
+.header-row-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 27px;
+  padding-right: 61px;
+}
+
+
 .header-search-bar {
-  padding-left: 22px;
+  padding-left: 36px;
   font-size: 15px;
   line-height: 20px;
   background: none; /*отключение стандартного фона для input */
   background-image: url(../img/search.svg);
+  background-size: 14px;
   background-repeat: no-repeat;
   background-position: left center;
   border: none;
   color: var(--basic-black);
   opacity: 0.3;
 }
+
+.header-links-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  padding-left: 3px;
+  width: 500px;
+  list-style: none;
+}
+
+
 
 
 
@@ -109,9 +146,12 @@ a {text-decoration: none; }
   display: inline-block;
   width: 13px;
   height: 14px;
+  margin-right: 8px;
   background-image: url(../img/user.svg);
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position-x: -3px;
+  background-position-y: 2px;
+  background-size: 13px;
 }
 
 .icon-compare::before {
@@ -119,6 +159,7 @@ a {text-decoration: none; }
   display: inline-block;
   width: 13px;
   height: 14px;
+  margin-right: 12px;
   background-image: url(../img/compare.svg);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -129,24 +170,39 @@ a {text-decoration: none; }
   display: inline-block;
   width: 13px;
   height: 14px;
+  margin-right: 12px;
   background-image: url(../img/cart.svg);
+  background-size: 82%;
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
 
-.header-navigation-menu {
-  list-style: none;
-
+.header-navigation-menu-wrapper {
+  margin-top: 42px;
+  padding-right: 57px;
 }
+
+.header-navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 .header-navigation-menu-list-item a {
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.1em;
+  line-height: 35px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.header-navigation-menu-list-item.icon-plus a {
+  letter-spacing: 0.1em;
 }
 
 .icon-plus::after {
@@ -154,11 +210,20 @@ a {text-decoration: none; }
   display: inline-block;
   width: 22px;
   height: 22px;
+  margin-left: 10px;
   background-image: url(../img/plus.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   opacity: 0.3;
+}
 
+.header-navigation-menu li:nth-child(2) {
+  margin-left: auto;
+  margin-right: 33px;
+}
+
+.header-navigation-menu li:nth-child(3) {
+  margin-right: 109px;
 }
 
 .header-navigation-submenu {
@@ -307,7 +372,19 @@ a {text-decoration: none; }
 
 /*Стилизация разделов "О нас", "Контакты"*/
 
+.about-us-contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 86px;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+}
+
 .about-us-header {
+  margin: 0;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 47px;
@@ -316,18 +393,34 @@ a {text-decoration: none; }
 }
 
 .about-us p {
+  margin: 0;
+  margin-top: 40px;
   font-size: 15px;
   line-height: 28px;
 }
 
+.about-us p:first-of-type {
+    margin-top: 50px;
+}
+
 .about-us-list {
+  margin: 0;
+  margin-top: 60px;
   list-style: none;
+}
+
+.about-us-list-item {
+  margin-top: 20px;
+}
+
+.about-us-list-item:first-child {
+  margin: 0;
 }
 
 .about-us-list-item a {
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
-  font-size: 22px;
+  font-size: 16px;
   color: var(--basic-black);
 }
 
@@ -343,6 +436,7 @@ a {text-decoration: none; }
 
 .about-us-details {
   position: relative;
+  margin-top: 84px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -352,9 +446,13 @@ a {text-decoration: none; }
   color: var(--basic-black);
 }
 
-
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
 
 .contacts-header {
+  margin: 0;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 47px;
@@ -363,16 +461,19 @@ a {text-decoration: none; }
 }
 
 .contacts p {
+  margin-top: 50px;
   font-size: 15px;
   line-height: 28px;
 }
 
 .map-image {
   display: block;
+  margin-top: 40px;
 }
 
 .contacts-write-us {
   position: relative;
+  margin-top: 61px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -388,8 +489,37 @@ a {text-decoration: none; }
   background-color: var(--basic-dark);
 }
 
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+}
+
+.footer-row-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-row-wrapper:last-child {
+  justify-content: center;
+}
+
+
+
 .footer-links-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.footer-links-list li {
+  margin-right: 38px;
+}
+
+.footer-links-list li:last-child {
+  margin: 0;
 }
 
 .footer a {
@@ -409,11 +539,35 @@ a {text-decoration: none; }
 }
 
 .footer-navigation-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .footer-social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
   list-style: none;
+}
+
+.footer-social-list li {
+  margin-right: 20px;
+}
+
+.footer-social-list li:last-child {
+  margin: 0;
+}
+
+
+.footer-navigation-menu li {
+  margin-right: 36px;
+}
+
+.footer-navigation-menu li:last-child {
+  margin: 0;
 }
 
 .footer-navigation-menu-item {
@@ -446,7 +600,7 @@ a {text-decoration: none; }
 }
 
 .icon-html-academy {
-  display: inline-block;
+  margin-left: auto;
   width: 27px;
   height: 34px;
   background-image: url(../img/logo-html.svg);
@@ -466,7 +620,28 @@ a {text-decoration: none; }
 
 /*Стилизация страницы catalog.html */
 
+.catalog-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-row-wrapper {
+  display: flex;
+}
+
 /*Стилизация секции с хлебными крошками */
+
+.breadcrumb-menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.breadcrumb-menu-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
 .breadcrumb-menu-header {
   font-family: 'Gilroy', 'Tahoma', sans-serif;
@@ -499,15 +674,44 @@ a {text-decoration: none; }
 
 /*Стилизация списка товаров*/
 
+
 .product-list {
+  display: grid;
+  grid-template-columns: 362px 362px;
+  column-gap: 38px;
+  row-gap: 48px;
+  margin: 0;
+  padding: 0;
+  margin-top: 70px;
+  margin-left: 72px;
+  flex-grow: 1;
   list-style: none;
 }
+
+.product-list-item img {
+  margin-bottom: 30px;
+}
+
+.product-list-item span {
+  margin-left: auto;
+}
+
+.product-list-item p {
+  margin: 0;
+}
+
+.product-list-item a {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 .cost-range {
   position: relative;
   -webkit-appearance: none; /*Обнуляем стандартные стили input с type="range" */
   width: 200px;
   height: 2px;
+  margin-top: 30px;
   background-color: var(--basic-black);
 }
 
@@ -539,8 +743,16 @@ a {text-decoration: none; }
 .cost-range-value {
   font-size: 14px;
   line-height: 16px;
-
 }
+
+.cost-range-values-wrapper span:last-child {
+  margin-left: 69px;
+}
+
+.product-filter-color-picker {
+  margin-top: 38px;
+}
+
 
 
 .product-description {
@@ -561,6 +773,14 @@ a {text-decoration: none; }
 
 /*стилизация фильтра товаров */
 
+.filter-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 315px;
+  background-color: var(--basic-grey-dark);
+}
+
 .filter-text {
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
@@ -571,6 +791,12 @@ a {text-decoration: none; }
 }
 
 .product-filter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 315px;
+  padding-top: 80px;
+  padding-left: 80px;
   background-color: var(--basic-grey-light);
 }
 
@@ -588,9 +814,15 @@ a {text-decoration: none; }
 
 
 .product-filter-color-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+
+.product-filter-color-list li {
+  margin-top: 20px;
+}
 
 
 .product-filter-color-list-label {
@@ -608,14 +840,25 @@ input:checked + .product-filter-color-list-label {
     background-image: url(../img/checkbox-on.svg);
 }
 
+.product-filter-bluetooth-picker {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-top: 30px;
+}
 .product-bluetooth-label {
   display: inline-block;
+  margin-top: 21px;
+  padding-left: 32px;
   height: 26px;
   font-size: 14px;
   line-height: 19px;
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
-  padding-left: 32px;
+}
+
+.product-bluetooth-label:first-child {
+  margin-top: 0;
 }
 
 input:checked + .product-bluetooth-label {
@@ -624,6 +867,7 @@ input:checked + .product-bluetooth-label {
 
 .product-filter-show {
   position: relative;
+  margin-top: 51px;
   background: none; /*отключение стандартного фона у button*/
   border: none; /*отключение стандартных рамок у button*/
   font-family: 'Gilroy', 'Tahoma', sans-serif;
@@ -635,7 +879,18 @@ input:checked + .product-bluetooth-label {
   z-index: 1;
 }
 
+.sort {
+  flex-grow: 1;
+}
+
 .sort-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 72px;
   list-style: none;
   background-color: var(--basic-grey-light);
 }
@@ -645,6 +900,11 @@ input:checked + .product-bluetooth-label {
   border: none;
   font-size: 14px;
   line-height: 19px;
+}
+
+.ascending-button {
+  margin-left: auto;
+  margin-right: 16px;
 }
 
 .catalog-navigation-list {
