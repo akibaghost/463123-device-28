@@ -67,72 +67,80 @@
       <div class="wrapper">
         <section class="slider-wrapper"> <!--слайдер из 3 позиций -->
           <ul class="slider">
+            <ul class="slider-navigation"> <!-- UI-элемент: кружки для навигации по слайду -->
+              <li class="slider-navigation-bullet"></li>
+              <li class="slider-navigation-bullet"></li>
+              <li class="slider-navigation-bullet"></li>
+            </ul>
             <li class="slider-element"> <!-- первый слайд -->
-              <span class="slider-element-number">01</span>
               <img src="img/slider-selfie-stick.png" width="384" height="486" alt="селфи-палка">
-              <h3 class="slider-element-header">Делай селфи, как Бен Стиллер!</h3>
-              <p class="slider-element-description">
-                Самая длинная палка для селфи доступна в нашем магазине.<br>
-                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-              </p>
-              <table>
-                <tr>
-                  <td class="slider-table-detail">8,5 м</td>
-                  <td class="slider-table-detail">5 кг</td>
-                  <td class="slider-table-detail">Карбон</td>
-                </tr>
-                <tr>
-                  <td class="slider-table-detail-name">Длина палки</td>
-                  <td class="slider-table-detail-name">Вес палки</td>
-                  <td class="slider-table-detail-name">Материал</td>
-                </tr>
-              </table>
-              <a class="slider-element-get-details hover-effect" href="#">Подробнее</a>
+              <div class="slider-element-wrapper">
+                <span class="slider-element-number">01</span>
+                <h3 class="slider-element-header">Делай селфи,<br>
+                   как Бен Стиллер!</h3>
+                <p class="slider-element-description">
+                  Самая длинная палка для селфи доступна в нашем магазине.<br>
+                  Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                </p>
+                <table class="slider-table">
+                  <tr>
+                    <td class="slider-table-detail">8,5 м</td>
+                    <td class="slider-table-detail">5 кг</td>
+                    <td class="slider-table-detail">Карбон</td>
+                  </tr>
+                  <tr>
+                    <td class="slider-table-detail-name">Длина палки</td>
+                    <td class="slider-table-detail-name">Вес палки</td>
+                    <td class="slider-table-detail-name">Материал</td>
+                  </tr>
+                </table>
+                <a class="slider-element-get-details hover-effect" href="#">Подробнее</a>
+            </div>
             </li>
-            <li class="slider-element"> <!-- второй слайд -->
-              <span class="slider-element-number">02</span>
+            <li class="slider-element visually-hidden"> <!-- второй слайд -->
               <img src="img/slider-smart-watch.png" width="345" height="485" alt="финтес-браслет">
-              <h3 class="slider-element-header">Худеем правильно!</h3>
-              <p class="slider-element-description">
-                Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
-                не пропускать занятия и соблюдать диету.
-              </p>
-              <table>
-                <tr>
-                  <td class="slider-table-detail">48 часов</td>
-                </tr>
-                <tr>
-                  <td class="slider-table-detail-name">Без подзарядки</td>
-                </tr>
-              </table>
-              <a class="slider-element-get-details hover-effect" href="#">Подробнее</a>
+              <div class="slider-element-wrapper">
+                <span class="slider-element-number">02</span>
+                <h3 class="slider-element-header">Худеем правильно!</h3>
+                <p class="slider-element-description">
+                  Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+                  не пропускать занятия и соблюдать диету.
+                </p>
+                <table>
+                  <tr>
+                    <td class="slider-table-detail">48 часов</td>
+                  </tr>
+                  <tr>
+                    <td class="slider-table-detail-name">Без подзарядки</td>
+                  </tr>
+                </table>
+                <a class="slider-element-get-details hover-effect" href="#">Подробнее</a>
+              </div>
             </li>
-            <li class="slider-element"> <!-- третий слайд -->
-              <span class="slider-element-number">03</span>
-              <img src="img/slider-drone.png" width="526" height="334" alt="квадрокоптер">
-              <h3 class="slider-element-header">Порхает как бабочка, жалит как пчела!</h3>
-              <p class="slider-element-description">
-                Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
-                мощным лазером, замаскированным под стандартную камеру.
-              </p>
-              <table>
-                <tr>
-                  <td class="slider-table-detail">800 м</td>
-                  <td class="slider-table-detail">50 м</td>
-                </tr>
-                <tr>
-                  <td class="slider-table-detail-name">Дальность поражения</td>
-                  <td class="slider-table-detail-name">Радиус поражения</td>
-                </tr>
-              </table>
-              <a class="slider-element-get-details hover-effect" href="#">Подробнее</a>
+            <li class="slider-element visually-hidden"> <!-- третий слайд -->
+                <img src="img/slider-drone.png" width="526" height="334" alt="квадрокоптер">
+                <div class="slider-element-wrapper">
+                <span class="slider-element-number">03</span>
+                <h3 class="slider-element-header">Порхает как бабочка, жалит как пчела!</h3>
+                <p class="slider-element-description">
+                  Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
+                  мощным лазером, замаскированным под стандартную камеру.
+                </p>
+                <table>
+                  <tr>
+                    <td class="slider-table-detail">800 м</td>
+                    <td class="slider-table-detail">50 м</td>
+                  </tr>
+                  <tr>
+                    <td class="slider-table-detail-name">Дальность поражения</td>
+                    <td class="slider-table-detail-name">Радиус поражения</td>
+                  </tr>
+                </table>
+                <a class="slider-element-get-details hover-effect" href="#">Подробнее</a>
+            </div>
             </li>
           </ul>
-          <ul class="slider-navigation"> <!-- UI-элемент: кружки для навигации по слайду -->
-            <li class="slider-navigation-bullet"></li>
-            <li class="slider-navigation-bullet"></li>
-            <li class="slider-navigation-bullet"></li>
-          </ul>
+
         </section>
     </div>
     </header>
@@ -141,39 +149,39 @@
       <section> <!-- раздел "Популярные категории товаров" -->
         <h2 class="visually-hidden">Популярные категории товаров</h2> <!-- скрытый заголовок -->
           <ul class="feature-products"> <!-- карточки с категориями -->
-            <li>
+            <li class="feature-products-item">
               <a href="">
-                <img class="feature-product-image" src="img/icon-vr.svg" alt="Очки виртуальной реальности">
+                <img class="feature-product-image product-image-vr" src="img/icon-vr.svg" alt="Очки виртуальной реальности">
                 <p class="feature-product-description">Виртуальная реальность</p>
               </a>
             </li>
-            <li>
+            <li class="feature-products-item">
               <a href="">
-                <img class="feature-product-image" src="img/icon-selfie-monopod.svg" alt="Монопод для селфи">
+                <img class="feature-product-image product-image-selfie-monopod" src="img/icon-selfie-monopod.svg" alt="Монопод для селфи">
                 <p class="feature-product-description">Моноподы для селфи</p>
               </a>
             </li>
-            <li>
+            <li class="feature-products-item">
               <a href="">
-                <img class="feature-product-image" src="img/icon-action-camera.svg" alt="Экшн-камера">
+                <img class="feature-product-image product-image-action-camera" src="img/icon-action-camera.svg" alt="Экшн-камера">
                 <p class="feature-product-description">Экшн-камеры</p>
               </a>
             </li>
-            <li>
+            <li class="feature-products-item">
               <a href="">
-                <img class="feature-product-image" src="img/icon-fitness-bracelet.svg" alt="Фитнес-браслет">
+                <img class="feature-product-image product-image-fitness-bracelet" src="img/icon-fitness-bracelet.svg" alt="Фитнес-браслет">
                 <p class="feature-product-description">Фитнес-браслеты</p>
               </a>
             </li>
-            <li>
+            <li class="feature-products-item">
               <a href="">
-                <img class="feature-product-image" src="img/icon-smart-watch.svg" alt="Умные часы">
+                <img class="feature-product-image product-image-smart-watch" src="img/icon-smart-watch.svg" alt="Умные часы">
                 <p class="feature-product-description">Умные часы</p>
               </a>
             </li>
-            <li>
+            <li class="feature-products-item">
               <a href="">
-                <img class="feature-product-image" src="img/icon-drone.svg" alt="Квадрокоптер">
+                <img class="feature-product-image product-image-drone" src="img/icon-drone.svg" alt="Квадрокоптер">
                 <p class="feature-product-description">Квадрокоптеры</p>
               </a>
             </li>
@@ -181,21 +189,28 @@
       </div>
       </section>
       <section class="services"> <!-- меню с сервисами компании -->
-        <div class="wrapper">
+        <div class="wrapper services-wrapper">
+          <ul class="services-headings-list">
+            <li class="service-item-selector hover-effect">Доставка</li>
+            <li class="service-item-selector hover-effect">Гарантия</li>
+            <li class="service-item-selector hover-effect">Кредит</li>
+          </ul>
           <h2 class="visually-hidden">Сервисы компании</h2> <!-- скрытый заголовок -->
            <ul class="services-list">
-             <li>
-               <span class="service-item-selector hover-effect">Доставка</span>
-               <h3 class="service-header">Доставка</h3>
-               <p class="service-item-description">
-                 Мы с удовольствием доставим ваш товар прямо к вашему<br>
-                  подъезду совершенно бесплатно! Ведь мы неплохо<br>
-                  заработаем, поднимая его на ваш этаж.
-              </p>
+             <li class="services-list-item">
+               <span class="visually-hidden">Доставка</span>
+               <div class="service-list-item-text-wrapper">
+                 <h3 class="service-header">Доставка</h3>
+                 <p class="service-item-description">
+                   Мы с удовольствием доставим ваш товар прямо к вашему<br>
+                    подъезду совершенно бесплатно! Ведь мы неплохо<br>
+                    заработаем, поднимая его на ваш этаж.
+                </p>
+               </div>
               <div class="service-image-delivery"></div>
              </li>
-             <li>
-               <span class="service-item-selector hover-effect">Гарантия</span>
+             <li class="services-list-item visually-hidden">
+               <span class="visually-hidden">Гарантия</span>
                <h3 class="service-header">Гарантия</h3> <!-- В макете отсутствует текст для гарантии, добавил свой. -->
                <p class="service-item-description">
                  Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
@@ -204,38 +219,39 @@
               </p>
               <div class="service-image-warranty"></div>
              </li>
-             <li>
-               <span class="service-item-selector hover-effect">Кредит</span>
+             <li class="services-list-item visually-hidden">
+               <span class="visually-hidden">Кредит</span>
                <h3 class="service-header">Кредит</h3> <!-- В макете отсутствует текст для кредита, добавил свой. -->
                <p class="service-item-description">
                  Залезть в долговую яму стало проще! Кредитные консультанты<br>
                   подберут для вас наиболее выгодные<br>
                   условия кредита. Выгодные для нашего банка, разумеется.
               </p>
+              <div class="service-image-credit"></div>
              </li>
-             <div class="service-image-credit"></div>
+
            </ul>
        </div>
       </section>
       <section class="brands"> <!-- раздел с представленными брендами -->
         <h2 class="visually-hidden">Представленные бренды</h2> <!-- скрытый заголовок -->
         <ul class="brands-list"> <!-- ссылки будут отрисованы в качестве изображений -->
-          <li>
+          <li class="brands-list-item">
             <a href="http://dji.com">
               <img src="img/logo-dji.png" width="260" height="100" alt="логотип DJI">
             </a>
           </li>
-          <li>
+          <li class="brands-list-item">
             <a href="http://sp-gadgets.com">
               <img src="img/logo-spgadgets.png" width="260" height="100" alt="логотип SP Gadgets">
             </a>
           </li>
-          <li>
+          <li class="brands-list-item">
             <a href="http://gopro.com">
               <img src="img/logo-gopro.png" width="260" height="100" alt="логотип GoPro">
             </a>
           </li>
-          <li>
+          <li class="brands-list-item">
             <a href="http://vive.com">
               <img src="img/logo-vive.png" width="260" height="100" alt="логотип VIVE">
             </a>
