@@ -42,12 +42,15 @@
   --basic-black: #000000;
   --basic-dark: #363636;
   --basic-white: #FFFFFF;
-  --basic-grey: #464646;
-  --basic-grey-dark: #DCDCDC;
-  --basic-half-grey: #7E7E7E;
-  --basic-grey-light: #E5E5E5;
-  --basic-grey-semilight: #EBEBEB;
+  --basic-gray: #464646;
+  --basic-neutral-gray: #F2F2F2;
+  --basic-semi-gray: #EAEAEA;
+  --basic-gray-dark: #DCDCDC;
+  --basic-half-gray: #7E7E7E;
+  --basic-gray-light: #E5E5E5;
+  --basic-gray-semilight: #EBEBEB;
   --special-yellow: #F7E296;
+  --special-yellow-decorative: #FFC600;
   --special-yellow-light: #F7E296;
   --special-green: #91C92F;
   --special-yellow-dark: #F0C52E;
@@ -81,6 +84,7 @@ a {text-decoration: none; }
 }
 
 .page-body {
+  margin: 0 auto;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -253,6 +257,7 @@ a {text-decoration: none; }
 /*стилизация слайдера*/
 
 .slider {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -307,11 +312,6 @@ a {text-decoration: none; }
   order: 1;
 }
 
-.slider-element-get-details {
-  margin-top: 62px;
-  margin-left: 44px;
-  order: 0;
-}
 
 .slider-table-detail {
   width: 103px;
@@ -332,6 +332,12 @@ a {text-decoration: none; }
 }
 
 .slider-element-get-details {
+  align-self: flex-start;
+  margin-top: 62px;
+  margin-left: 2px;
+  min-width: 220px;
+  order: 0;
+  text-align: center;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -343,8 +349,8 @@ a {text-decoration: none; }
 
 .slider-navigation {
   position: absolute;
-  right: 308px;
-  bottom: 190px;
+  right: 90px;
+  bottom: 138px;
   list-style: none;
 }
 
@@ -408,7 +414,6 @@ a {text-decoration: none; }
 }
 
 .feature-product-description {
-  width: 125px;
   margin: 0;
   margin-top: 35px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
@@ -417,6 +422,11 @@ a {text-decoration: none; }
   line-height: 22px;
   letter-spacing: 1px;
 }
+
+.feature-product-description-fitness-bracelet {
+  letter-spacing: inherit;
+}
+
 
 .product-image-fitness-bracelet {
   padding-top: 48px;
@@ -445,7 +455,7 @@ a {text-decoration: none; }
 
 .services {
   padding-bottom: 65px;
-  background: linear-gradient(to bottom,var(--basic-white) 0%, transparent 26%,  var(--basic-grey-light) 26%);
+  background: linear-gradient(to bottom,var(--basic-white) 0%, transparent 26%,  var(--basic-gray-light) 26%);
 }
 
 .services-wrapper {
@@ -454,12 +464,16 @@ a {text-decoration: none; }
 }
 
 .services-headings-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 283px;
   margin: 0;
   padding: 0;
   height: 320px;
-  padding-top: 90px;
-  padding-left: 20px;
-  padding-right: 132px;
+  padding-top: 80px;
+  padding-left: 0px;
+  /* padding-right: 116px; */
   border-right: 7px solid black;
   list-style: none;
 }
@@ -496,17 +510,25 @@ a {text-decoration: none; }
 }
 
 .service-item-selector {
-  margin-top: 39px;
+  display: block;
+  min-width: 160px;
+  margin-top: 30px;
+  border: none;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .service-item-selector:first-child {
   margin-top: 0;
+}
+
+.service-item-selector:last-child {
+  margin-top: 37px;
 }
 
 
@@ -616,13 +638,15 @@ a {text-decoration: none; }
 }
 
 .about-us-details {
-  position: relative;
+  align-self: flex-start;
+  min-width: 260px;
   margin-top: 84px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--basic-black);
 }
@@ -653,7 +677,8 @@ a {text-decoration: none; }
 }
 
 .contacts-write-us {
-  position: relative;
+  align-self: flex-start;
+  min-width: 260px;
   margin-top: 83px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
@@ -661,14 +686,17 @@ a {text-decoration: none; }
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--basic-black);
 }
 
 /*Стилизация подвала*/
 
 .footer {
+  position: relative;
   background-color: var(--basic-dark);
   padding-top: 46px;
+  padding-bottom: 50px;
 }
 
 .footer-wrapper {
@@ -704,7 +732,7 @@ a {text-decoration: none; }
 }
 
 .footer-links-list li {
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .footer-links-list li:last-child {
@@ -728,6 +756,14 @@ a {text-decoration: none; }
   margin-right: 165px;
 }
 
+.footer-phone-link {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+}
+
 .footer-navigation-menu {
   display: flex;
   margin: 0;
@@ -741,6 +777,7 @@ a {text-decoration: none; }
   margin: 0;
   padding: 0;
   margin-left: auto;
+  padding-left: 45px;
   padding-right: 20px;
   list-style: none;
 }
@@ -779,12 +816,10 @@ a {text-decoration: none; }
 .social-icon {
   width: 32px;
   height: 32px;
-  opacity: 0.3;
 }
 
 .icon-facebook {
   background-image: url(../img/fb.svg);
-
 }
 
 .icon-instagram {
@@ -802,9 +837,12 @@ a {text-decoration: none; }
   background-image: url(../img/logo-html.svg);
 }
 
+.svg-fill, .svg-fill path {
+  fill: var(--special-yellow-dark);
+}
+
 .footer-logo-device {
   margin-top: 17px;
-  fill: var(--special-yellow-dark);
 }
 
 .footer-address {
@@ -814,6 +852,14 @@ a {text-decoration: none; }
   color: var(--basic-white);
 }
 
+.yellow-block {
+  position: absolute;
+  bottom: 79px;
+  left: 140px;
+  width: 80px;
+  height: 7px;
+  background-color: var(--special-yellow-decorative);
+}
 
 /*Стилизация страницы catalog.html */
 
@@ -826,6 +872,21 @@ a {text-decoration: none; }
   display: flex;
 }
 
+.header-wrapper-padding-bottom {
+  padding-bottom: 45px;
+}
+
+ul.header-links-list li.icon-margin {
+  margin-left: 0px;
+}
+
+.icon-margin {
+  margin-right: 40px;
+}
+
+.icon-margin-right {
+  margin-right: auto;
+}
 /*Стилизация секции с хлебными крошками */
 
 .breadcrumb-menu {
@@ -975,7 +1036,7 @@ a {text-decoration: none; }
   justify-content: center;
   align-items: center;
   flex-basis: 315px;
-  background-color: var(--basic-grey-dark);
+  background-color: var(--basic-gray-dark);
 }
 
 .filter-text {
@@ -994,7 +1055,7 @@ a {text-decoration: none; }
   flex-basis: 315px;
   padding-top: 80px;
   padding-left: 80px;
-  background-color: var(--basic-grey-light);
+  background-color: var(--basic-gray-light);
 }
 
 .product-filter-form fieldset {
@@ -1089,7 +1150,7 @@ input:checked + .product-bluetooth-label {
   padding-bottom: 25px;
   padding-left: 72px;
   list-style: none;
-  background-color: var(--basic-grey-light);
+  background-color: var(--basic-gray-light);
 }
 
 .sort-button {
@@ -1123,7 +1184,7 @@ input:checked + .product-bluetooth-label {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   list-style: none;
-  background-color: var(--basic-grey-semilight);
+  background-color: var(--basic-gray-semilight);
 }
 
 .catalog-navigation-list-item {
@@ -1141,12 +1202,131 @@ input:checked + .product-bluetooth-label {
 
 /*Стилизация popup */
 
-.popup-feedback, .popup-map {
-  display: none;
+
+.popup-feedback {
+	display: inline;
+  position: relative;
+	width: 960px;
+	height: 550px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+}
+
+.popup-feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 92px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.popup-feedback-form p {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-feedback-form input, .popup-feedback-form textarea {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  border: none;
+  color: var(--basic-black);
+  background-color: var(--basic-neutral-gray);
+  opacity: 0.4;
+}
+
+.popup-feedback-form input {
+  margin-top: 10px;
+  margin-bottom: 32px;
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+.popup-feedback-form textarea {
+  margin-top: 10px;
+  padding-top: 16px;
+  padding-left: 20px;
+  resize: none;
+}
+
+.popup-feedback-close-button, .popup-map-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--special-yellow);
+  background-image: url(../img/modal-close.svg);
+  opacity: 0.5;
+}
+
+.popup-feedback-item {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.popup-feedback-form label {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.popup-textarea {
+  width: 100%;
+}
+
+
+
+.popup-feedback-form button {
+  display: block;
+  margin-top: 54px;
+  border: none;
+  background: none;
+  background:  linear-gradient(transparent 30%, var(--special-yellow-dark) 30%, var(--special-yellow-dark) 65%, transparent 65%);
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+
+.popup-map {
+  position: relative;
+  width: 994px;
+  height: 593px;
+}
+
+.popup-map-close-button {
+  right: 36px;
 }
 
 
 /*Стилизация состояний*/
+
+button.selected-button {
+  height: 40px;
+  padding-left: 19px;
+  background: var(--basic-black);
+  color: var(--special-yellow);
+  text-align: left;
+  align-self: stretch;
+}
+
+.interactive-element-idle {
+  background:  linear-gradient(transparent 30%, var(--special-yellow-dark) 30%, var(--special-yellow-dark) 65%, transparent 65%);
+}
 
 .header a:hover {
   opacity: 0.6;
@@ -1174,11 +1354,14 @@ input:checked + .product-bluetooth-label {
 
 .hover-effect:hover {
   background-color: var(--special-yellow-dark);
+  transition: 0.2s ease-out;
 }
 
 .hover-effect:active {
+  background: none;
   background-color: var(--basic-black);
   color: var(--special-yellow);
+  opacity: 1;
 }
 
 
@@ -1195,4 +1378,27 @@ input:checked + .product-bluetooth-label {
 
 .icon-html-academy:hover {
   opacity: 0.6;
+}
+
+.popup-feedback-close-button:hover {
+  opacity: 1;
+}
+
+.popup-feedback-close-button:active {
+  opacity: 0.3;
+}
+
+.popup-feedback-form input:hover, .popup-feedback-form textarea:hover {
+  background-color:  var(--basic-semi-gray);
+  opacity: 1;
+}
+
+.popup-feedback-form input:focus, .popup-feedback-form textarea:focus {
+  outline: 2px solid var(--special-yellow);
+  background-color: var(--basic-white);
+  opacity: 1;
+}
+
+.popup-feedback-form input:invalid, .popup-feedback-form textarea:invalid {
+  background-color: var(--status-pink);
 }
