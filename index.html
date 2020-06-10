@@ -67,6 +67,7 @@
       <div class="wrapper">
         <section class="slider-wrapper"> <!--слайдер из 3 позиций -->
           <ul class="slider">
+            <div class="white-block"></div>
             <ul class="slider-navigation"> <!-- UI-элемент: кружки для навигации по слайду -->
               <li class="slider-navigation-bullet"></li>
               <li class="slider-navigation-bullet"></li>
@@ -97,11 +98,13 @@
                 <a class="slider-element-get-details hover-effect interactive-element-idle" href="#">Подробнее</a>
             </div>
             </li>
-            <li class="slider-element visually-hidden"> <!-- второй слайд -->
+            <li class="slider-element second-slider-element visually-hidden"> <!-- второй слайд -->
               <img src="img/slider-smart-watch.png" width="345" height="485" alt="финтес-браслет">
               <div class="slider-element-wrapper">
                 <span class="slider-element-number">02</span>
-                <h3 class="slider-element-header">Худеем правильно!</h3>
+                <h3 class="slider-element-header">
+                  Худеем<br>
+                  правильно!</h3>
                 <p class="slider-element-description">
                   Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
                   не пропускать занятия и соблюдать диету.
@@ -117,11 +120,13 @@
                 <a class="slider-element-get-details hover-effect interactive-element-idle" href="#">Подробнее</a>
               </div>
             </li>
-            <li class="slider-element visually-hidden"> <!-- третий слайд -->
+            <li class="slider-element third-slider-element visually-hidden"> <!-- третий слайд -->
                 <img src="img/slider-drone.png" width="526" height="334" alt="квадрокоптер">
                 <div class="slider-element-wrapper">
                 <span class="slider-element-number">03</span>
-                <h3 class="slider-element-header">Порхает как бабочка, жалит как пчела!</h3>
+                <h3 class="slider-element-header">
+                  Порхает как бабочка,<br>
+                   жалит как пчела!</h3>
                 <p class="slider-element-description">
                   Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                   мощным лазером, замаскированным под стандартную камеру.
@@ -261,6 +266,7 @@
       </section>
       <div class="wrapper about-us-contacts-wrapper">
         <section class="about-us"> <!--Раздел "о нас" -->
+            <div class="black-block"></div>
             <h2 class="about-us-header">О нас</h2>
             <p>
               Огромный выбор гаджетов не оставит равнодушным гика,<br>
@@ -284,6 +290,7 @@
             <a class="about-us-details hover-effect interactive-element-idle" href="">Подробнее о нас</a>
         </section>
         <section class="contacts"> <!-- Раздел "Контакты" -->
+          <div class="black-block"></div>
           <h2 class="contacts-header">Контакты</h2>
           <p>
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
@@ -353,11 +360,11 @@
                 <a href=""></a>
               </li>
             </ul>
-          <a class="icon-html-academy" href="http://htmlacademy.ru"></a> <!-- иконка с HTML Academy -->
+          <a class="icon-html-academy" href="https://htmlacademy.ru/intensive/htmlcss"></a> <!-- иконка с HTML Academy -->
       </div>
     </div>
     </footer>
-    <section class="popup-feedback"> <!-- Popup: форма обратной связи. Теги <br> временные, позже позиция элементов будет реализована с помощью CSS -->
+    <section class="popup-feedback visually-hidden"> <!-- Popup: форма обратной связи. Теги <br> временные, позже позиция элементов будет реализована с помощью CSS -->
       <h2 class="visually-hidden">Свяжитесь с нами</h2> <!-- скрытый заголовок -->
       <button class="popup-feedback-close-button" type="button" aria-label="Закрыть форму обратной связи"></button>
       <form class="popup-feedback-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -376,7 +383,7 @@
         <button class="hover-effect" type="submit">Отправить</button>
       </form>
     </section>
-    <section class="popup-map"> <!-- Popup: карта -->
+    <section class="popup-map visually-hidden"> <!-- Popup: карта -->
       <h2 class="visually-hidden">Адрес</h2> <!-- скрытый заголовок -->
       <button class="popup-map-close-button" type="button" aria-label="Закрыть карту с адресом"></button>
       <img src="img/map-big.png" alt="Карта с адресом: г. Москва, ул. Строителей, 15">

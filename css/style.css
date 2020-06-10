@@ -100,6 +100,10 @@ a {text-decoration: none; }
   background: linear-gradient(to bottom,var(--basic-white) 0%, transparent 21%,  var(--special-yellow) 21%);
 }
 
+.catalog-page-gradient {
+  background: linear-gradient(to bottom,var(--basic-white) 0%, transparent 18%,  var(--special-yellow) 18%);
+}
+
 .header-wrapper a {
   margin-top: 20px;
   margin-left: 58px;
@@ -170,9 +174,9 @@ a {text-decoration: none; }
   margin-right: 8px;
   background-image: url(../img/user.svg);
   background-repeat: no-repeat;
-  background-position-x: -3px;
-  background-position-y: 2px;
-  background-size: 13px;
+  background-position-x: 0px;
+  background-position-y: 3px;
+  background-size: 10px;
 }
 
 .icon-compare::before {
@@ -264,12 +268,44 @@ a {text-decoration: none; }
   background: linear-gradient(to bottom,var(--special-yellow) 31%, transparent 31%,  var(--basic-white) 31%);
 }
 
+.white-block {
+  position: absolute;
+  top: 63px;
+  right: 460px;
+  width: 100px;
+  height: 7px;
+  background-color: var(--basic-white);
+}
+
 .slider-element {
   display: flex;
   padding-top: 29px;
   padding-left: 89px;
 
 }
+
+.second-slider-element {
+  padding-top: 55px;
+  padding-left: 115px;
+}
+
+.third-slider-element {
+  padding-left: 0;
+}
+
+.third-slider-element img {
+  margin-top: 85px;
+  margin-left: 30px;
+}
+
+.third-slider-element .slider-element-wrapper {
+  padding-left: 45px;
+}
+
+.third-slider-element .slider-element-header {
+  z-index: 5;
+}
+
 
 .slider-element-wrapper {
   display: flex;
@@ -312,9 +348,12 @@ a {text-decoration: none; }
   order: 1;
 }
 
+.slider-table-detail:nth-child(2) {
+  padding-left: 7px;
+}
 
 .slider-table-detail {
-  width: 103px;
+  width: 83px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 300;
   font-size: 36px;
@@ -324,11 +363,16 @@ a {text-decoration: none; }
 
 .slider-table-detail-name {
   padding-top: 13px;
+  padding-left: 6px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
+}
+
+.slider-table-detail-name:first-child {
+  padding-left: 0;
 }
 
 .slider-element-get-details {
@@ -573,6 +617,7 @@ a {text-decoration: none; }
 
 /*Стилизация разделов "О нас", "Контакты"*/
 
+
 .about-us-contacts-wrapper {
   display: flex;
   justify-content: space-between;
@@ -581,8 +626,17 @@ a {text-decoration: none; }
 }
 
 .about-us {
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.black-block {
+  position: absolute;
+  top: -60px;
+  width: 80px;
+  height: 7px;
+  background-color: var(--basic-black);
 }
 
 .about-us-header {
@@ -652,6 +706,7 @@ a {text-decoration: none; }
 }
 
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -732,12 +787,13 @@ a {text-decoration: none; }
 }
 
 .footer-links-list li {
-  margin-right: 50px;
+  margin-right: 45px;
 }
 
 .footer-links-list li:last-child {
   margin: 0;
 }
+
 
 .footer a {
   color: var(--basic-white);
@@ -791,10 +847,6 @@ a {text-decoration: none; }
 }
 
 
-.footer-navigation-menu li {
-
-}
-
 
 
 .footer-navigation-menu-item {
@@ -817,6 +869,19 @@ a {text-decoration: none; }
   width: 32px;
   height: 32px;
 }
+
+li.login-link-unclude-position {
+  margin-right: 20px;
+}
+
+.footer-icon-user {
+  margin-right: 9px;
+}
+
+.footer-icon-compare {
+  margin-right: 9px;
+}
+
 
 .icon-facebook {
   background-image: url(../img/fb.svg);
@@ -863,6 +928,11 @@ a {text-decoration: none; }
 
 /*Стилизация страницы catalog.html */
 
+.position-container {
+  padding-left: 120px;
+  background: linear-gradient(to bottom,var(--basic-gray-dark) 0%, var(--basic-gray-dark) 5.8%,  var(--basic-gray-light) 5.8%);
+}
+
 .catalog-wrapper {
     display: flex;
     flex-direction: column;
@@ -892,16 +962,20 @@ ul.header-links-list li.icon-margin {
 .breadcrumb-menu {
   display: flex;
   flex-direction: column;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+  padding-top: 43px;
+  padding-left: 60px;
 }
 
 .breadcrumb-menu-list {
   display: flex;
   margin: 0;
   padding: 0;
+  margin-top: 31px;
 }
 
 .breadcrumb-menu-header {
+  margin: 0;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -914,13 +988,25 @@ ul.header-links-list li.icon-margin {
 }
 
 .breadcrumb-menu-list-item {
+  position: relative;
+  margin-right: 20px;
+  margin-left: 20px;
   font-size: 14px;
   line-height: 19px;
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.breadcrumb-menu-list-item::after {
+.breadcrumb-menu-list-item:first-child {
+  margin-left: 0;
+}
+
+
+
+.breadcrumb-menu-list-item:not(:last-child)::after {
+  position: absolute;
+  top: 2px;
+  right: -25px;
   content: '';
   display: inline-block;
   width: 12px;
@@ -932,6 +1018,12 @@ ul.header-links-list li.icon-margin {
 
 /*Стилизация списка товаров*/
 
+.products {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--basic-white);
+}
 
 .product-list {
   display: grid;
@@ -941,9 +1033,14 @@ ul.header-links-list li.icon-margin {
   margin: 0;
   padding: 0;
   margin-top: 70px;
-  margin-left: 72px;
+  margin-left: 74px;
   flex-grow: 1;
   list-style: none;
+
+}
+
+.product-list-item {
+    position: relative;
 }
 
 .product-list-item img {
@@ -951,7 +1048,12 @@ ul.header-links-list li.icon-margin {
 }
 
 .product-list-item span {
+  margin-top: 2px;
   margin-left: auto;
+}
+
+.product-list-item:first-child span {
+  margin-left: 20px;
 }
 
 .product-list-item p {
@@ -963,13 +1065,22 @@ ul.header-links-list li.icon-margin {
   flex-wrap: wrap;
 }
 
+.new-sticker {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 62px;
+  height: 62px;
+  background-image: url(../img/new-sticker.svg);
+}
 
 .cost-range {
   position: relative;
   -webkit-appearance: none; /*Обнуляем стандартные стили input с type="range" */
   width: 200px;
   height: 2px;
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-left: 15px;
   background-color: var(--basic-black);
 }
 
@@ -981,7 +1092,7 @@ ul.header-links-list li.icon-margin {
   position: absolute;
   top: -9px;
   content: '';
-  width: 94px;
+  width: 133px;
   height: 22px;
   background-image: url(../img/filter-button.svg), url(../img/filter-button.svg);
   background-repeat: no-repeat;
@@ -993,24 +1104,32 @@ ul.header-links-list li.icon-margin {
   position: absolute;
   content: '';
   display: inline-block;
-  width: 94px;
+  width: 119px;
   height: 2px;
   background-color: var(--special-green);
 }
 
 .cost-range-value {
+  margin-left: 14px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 300;
   font-size: 14px;
   line-height: 16px;
 }
+
 
 .cost-range-values-wrapper span:last-child {
   margin-left: 69px;
 }
 
 .product-filter-color-picker {
-  margin-top: 38px;
+  margin-top: 50px;
 }
 
+.product-filter-color-picker .product-filter-header {
+  margin-left: 0;
+}
 
 
 .product-description {
@@ -1035,7 +1154,7 @@ ul.header-links-list li.icon-margin {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: 315px;
+  flex-basis: 348px;
   background-color: var(--basic-gray-dark);
 }
 
@@ -1048,13 +1167,17 @@ ul.header-links-list li.icon-margin {
   text-transform: uppercase;
 }
 
+.filter-heading .filter-text {
+  margin-right: 111px;
+}
+
 .product-filter-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-basis: 315px;
+  flex-basis: 445px;
   padding-top: 80px;
-  padding-left: 80px;
+  padding-left: 65px;
   background-color: var(--basic-gray-light);
 }
 
@@ -1063,6 +1186,9 @@ ul.header-links-list li.icon-margin {
 }
 
 .product-filter-header {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 15px;
   font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-weight: 800;
   font-size: 14px;
@@ -1070,6 +1196,16 @@ ul.header-links-list li.icon-margin {
   letter-spacing: 0.1em;
 }
 
+
+.product-filter-header::before {
+  position: absolute;
+  top: -17px;
+  content: '';
+  width: 200px;
+  height: 2px;
+  background-color: var(--basic-black);
+
+}
 
 .product-filter-color-list {
   margin: 0;
@@ -1079,7 +1215,17 @@ ul.header-links-list li.icon-margin {
 
 
 .product-filter-color-list li {
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.product-filter-color-list li:first-child {
+  margin-top: 25px;
 }
 
 
@@ -1101,14 +1247,21 @@ input:checked + .product-filter-color-list-label {
 .product-filter-bluetooth-picker {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-    padding-top: 30px;
+    margin-top: 44px;
+    padding-top: 10px;
 }
+
+.product-filter-bluetooth-picker .product-filter-header {
+  padding-top: 2px;
+  margin-left: 0;
+}
+
 .product-bluetooth-label {
   display: inline-block;
-  margin-top: 21px;
-  padding-left: 32px;
+  margin-top: 17px;
+  padding-left: 40px;
   height: 26px;
+  font-family: 'Open Sans';
   font-size: 14px;
   line-height: 19px;
   background-image: url(../img/radio-off.svg);
@@ -1125,7 +1278,9 @@ input:checked + .product-bluetooth-label {
 
 .product-filter-show {
   position: relative;
-  margin-top: 51px;
+  min-width: 200px;
+  margin-top: 35px;
+  margin-left: 11px;
   background: none; /*отключение стандартного фона у button*/
   border: none; /*отключение стандартных рамок у button*/
   font-family: 'Gilroy', 'Tahoma', sans-serif;
@@ -1153,7 +1308,28 @@ input:checked + .product-bluetooth-label {
   background-color: var(--basic-gray-light);
 }
 
+.sort-list-item {
+  margin-left: 20px;
+}
+
+.sort-list-item:nth-child(2) {
+  margin-left: 65px;
+}
+
+.sort-list-item:first-child {
+  margin-left: 0;
+}
+
+.sort-list-item:last-child {
+  margin-right: 142px;
+  margin-left: 0;
+}
+
+
+
+
 .sort-button {
+  font-family: 'Open Sans';
   background: none;
   border: none;
   font-size: 14px;
@@ -1166,11 +1342,14 @@ input:checked + .product-bluetooth-label {
 }
 
 .catalog-navigation-wrapper {
+  margin-right: 140px;
   padding-left: 72px;
 }
 
 .catalog-navigation-list {
   display: flex;
+  margin-top: 41px;
+  margin-bottom: 80px;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-right: 30px;
@@ -1187,8 +1366,9 @@ input:checked + .product-bluetooth-label {
   background-color: var(--basic-gray-semilight);
 }
 
+
 .catalog-navigation-list-item {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .catalog-navigation-list-item:first-child {
@@ -1197,7 +1377,7 @@ input:checked + .product-bluetooth-label {
 }
 
 .catalog-navigation-list-item:last-child {
-  margin-left: auto;
+  margin-left: 237px;
 }
 
 /*Стилизация popup */
