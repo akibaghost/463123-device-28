@@ -1,6 +1,9 @@
 let writeUsButton = document.querySelector(".contacts-write-us");
 let popupFeedback = document.querySelector(".popup-feedback");
 let popupFeedbackCloseButton = document.querySelector(".popup-feedback-close-button");
+let popupMap = document.querySelector(".popup-map");
+let mapLink = document.querySelector('.map-image');
+let popupMapCloseButton = document.querySelector(".popup-map-close-button");
 let sliderNavigation = document.querySelector('.slider-navigation');
 let servicesHeadingsList = document.querySelector('.services-headings-list');
 
@@ -104,4 +107,16 @@ popupFeedbackCloseButton.addEventListener('click', function(event) {
 popupFeedback.addEventListener('keyup', function() {
     localStorage.setItem("userEmail", popupFeedback.querySelector('[type="email"]').value);
     localStorage.setItem("userName", popupFeedback.querySelector('[type="text"]').value);
+});
+
+mapLink.addEventListener('click', function(event){
+  event.preventDefault();
+  popupMap.classList.remove('visually-hidden');
+  popupMap.classList.add('top-bounce');
+});
+
+popupMapCloseButton.addEventListener('click', function(event){
+  event.preventDefault();
+  popupMap.classList.add('visually-hidden');
+  popupMap.classList.remove('top-bounce');
 });
