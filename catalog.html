@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
   </head>
   <body class="page-body">
     <header> <!-- шапка сайта -->
-      <div class="wrapper header-wrapper catalog-page-gradient header-wrapper-padding-bottom">
+      <div class="wrapper header-wrapper catalog-page-gradient header-wrapper-catalog-position">
         <a href="index.html"><img src="img/logo-device.svg" width="165" height="35" alt="Логотип DEVICE"></a> <!-- логотип -->
         <div class="header-row-wrapper">
           <input class="header-search-bar" type="search" name="search-into-site" value="Поиск по сайту">
@@ -17,10 +18,10 @@
             <li>
               <a class="icon-user" href="login.html">Валентин Петухов</a>
             </li>
-              <li class="link-logout icon-margin-right">
+              <li class="link-logout icon-logout-position">
                 <a href="">Выйти</a>
               </li>
-            <li class="icon-margin">
+            <li class="icon-position">
               <a class="icon-compare" href="">Сравнить</a>
             </li>
             <li>
@@ -148,7 +149,7 @@
             </fieldset>
             <button type="submit" class="product-filter-show hover-effect interactive-element-idle">Показать</button>
           </form>
-            <section class="products"> <!-- Список товаров -->
+            <div class="products"> <!-- Список товаров -->
               <ul class="product-list">
                 <li class="product-list-item">
                     <a href="">
@@ -174,7 +175,6 @@
                     </a>
                 </li>
                 <li class="product-list-item">
-                  <div class="new-sticker"></div>
                     <a href="">
                       <img src="img/followme-selfie-stick.jpg" width="360" height="380" alt="Селфи-палка Селфи-палка «Следуй за мной»">
                       <p class="product-description">
@@ -204,7 +204,7 @@
                     </li>
                   </ul>
               </div>
-            </section>
+            </div>
         </section>
       </div>
       </div>

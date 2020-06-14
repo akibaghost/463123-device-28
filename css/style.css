@@ -84,7 +84,7 @@ a {text-decoration: none; }
 }
 
 .page-body {
-  margin: 0 auto;
+  min-width: 100%;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -268,7 +268,8 @@ a {text-decoration: none; }
   background: linear-gradient(to bottom,var(--special-yellow) 31%, transparent 31%,  var(--basic-white) 31%);
 }
 
-.white-block {
+.slider::before {
+  content: '';
   position: absolute;
   top: 63px;
   right: 460px;
@@ -283,29 +284,6 @@ a {text-decoration: none; }
   padding-left: 89px;
 
 }
-
-.second-slider-element {
-  padding-top: 55px;
-  padding-left: 115px;
-}
-
-.third-slider-element {
-  padding-left: 0;
-}
-
-.third-slider-element img {
-  margin-top: 85px;
-  margin-left: 30px;
-}
-
-.third-slider-element .slider-element-wrapper {
-  padding-left: 45px;
-}
-
-.third-slider-element .slider-element-header {
-  z-index: 5;
-}
-
 
 .slider-element-wrapper {
   display: flex;
@@ -396,6 +374,7 @@ a {text-decoration: none; }
   right: 90px;
   bottom: 138px;
   list-style: none;
+  z-index: 10;
 }
 
 .slider-navigation li {
@@ -403,6 +382,7 @@ a {text-decoration: none; }
 }
 
 .slider-navigation-bullet {
+  position: relative;
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -410,8 +390,57 @@ a {text-decoration: none; }
   background-size: 100%;
 }
 
-.slider-navigation-bullet:first-child {
+.slider-navigation-bullet button {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: none;
+  background: transparent;
+  z-index: 1;
+}
+
+.selected-bullet {
   background-image: url(../img/slider-button.svg);
+}
+
+
+.second-slider-element {
+  padding-top: 55px;
+  padding-left: 115px;
+}
+
+.second-slider-element .slider-element-number {
+  top: -29px;
+  right: 55px;
+}
+
+.second-slider-element .slider-element-wrapper {
+  padding-top: 67px;
+  padding-left: 140px;
+}
+
+
+.third-slider-element {
+  padding-left: 0;
+}
+
+.third-slider-element img {
+  margin-top: 85px;
+  margin-left: 30px;
+}
+
+.third-slider-element .slider-element-wrapper {
+  padding-left: 42px;
+  z-index: 5;
+}
+
+.third-slider-element .slider-element-number {
+  right: 55px;
+  z-index: -2;
+}
+
+.third-slider-element .slider-table-detail:last-child {
+  padding-right: 218px;
 }
 
 /*Стилизация раздела "Популярные категории товаров"*/
@@ -585,9 +614,11 @@ a {text-decoration: none; }
 }
 
 .service-image-warranty {
-  width: 171px;
+  width: 191px;
   height: 195px;
   background-image: url(../img/warranty.svg);
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .service-image-credit {
@@ -603,7 +634,7 @@ a {text-decoration: none; }
   margin: 0;
   padding: 0;
   padding-top: 95px;
-  padding-left: 140px;
+  padding-left: 180px;
   list-style: none;
 }
 
@@ -631,13 +662,15 @@ a {text-decoration: none; }
   flex-direction: column;
 }
 
-.black-block {
+.about-us::before, .contacts::before {
+  content: '';
   position: absolute;
   top: -60px;
   width: 80px;
   height: 7px;
   background-color: var(--basic-black);
 }
+
 
 .about-us-header {
   margin: 0;
@@ -787,7 +820,7 @@ a {text-decoration: none; }
 }
 
 .footer-links-list li {
-  margin-right: 45px;
+  margin-right: 50px;
 }
 
 .footer-links-list li:last-child {
@@ -917,10 +950,11 @@ li.login-link-unclude-position {
   color: var(--basic-white);
 }
 
-.yellow-block {
+.footer::before {
+  content: '';
   position: absolute;
   bottom: 79px;
-  left: 140px;
+  left: 180px;
   width: 80px;
   height: 7px;
   background-color: var(--special-yellow-decorative);
@@ -929,8 +963,8 @@ li.login-link-unclude-position {
 /*Стилизация страницы catalog.html */
 
 .position-container {
-  padding-left: 120px;
-  background: linear-gradient(to bottom,var(--basic-gray-dark) 0%, var(--basic-gray-dark) 5.8%,  var(--basic-gray-light) 5.8%);
+  padding-left: 160px;
+  background: linear-gradient(to bottom,var(--basic-gray-dark) 0%, var(--basic-gray-dark) 5.5%,  var(--basic-gray-light) 5.5%);
 }
 
 .catalog-wrapper {
@@ -942,19 +976,19 @@ li.login-link-unclude-position {
   display: flex;
 }
 
-.header-wrapper-padding-bottom {
+.header-wrapper-catalog-position {
   padding-bottom: 45px;
 }
 
-ul.header-links-list li.icon-margin {
+ul.header-links-list li.icon-position {
   margin-left: 0px;
 }
 
-.icon-margin {
+.icon-position {
   margin-right: 40px;
 }
 
-.icon-margin-right {
+.icon-logout-position {
   margin-right: auto;
 }
 /*Стилизация секции с хлебными крошками */
@@ -1065,7 +1099,8 @@ ul.header-links-list li.icon-margin {
   flex-wrap: wrap;
 }
 
-.new-sticker {
+.product-list-item:last-child::after {
+  content: '';
   position: absolute;
   top: 30px;
   right: 30px;
@@ -1304,6 +1339,7 @@ input:checked + .product-bluetooth-label {
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 72px;
+  padding-right: 40px;
   list-style: none;
   background-color: var(--basic-gray-light);
 }
@@ -1384,12 +1420,14 @@ input:checked + .product-bluetooth-label {
 
 
 .popup-feedback {
-	display: inline;
-  position: relative;
+  position: fixed;
+  top: 90px;
+  left: calc(50% - 480px);
 	width: 960px;
 	height: 550px;
   background-color: var(--basic-white);
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  z-index: 20;
 }
 
 .popup-feedback-form {
@@ -1581,4 +1619,18 @@ button.selected-button {
 
 .popup-feedback-form input:invalid, .popup-feedback-form textarea:invalid {
   background-color: var(--status-pink);
+}
+
+
+/*анимации */
+
+.top-bounce {
+  animation-name: top-bounce;
+  animation-duration: 1s;
+}
+
+@keyframes top-bounce {
+  from {top: -2000px}
+  50% {top: 200px}
+  100% {top: 90px}
 }

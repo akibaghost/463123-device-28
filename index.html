@@ -5,6 +5,7 @@
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
   </head>
   <body class="page-body">
     <header class="header"> <!-- шапка -->
@@ -67,13 +68,18 @@
       <div class="wrapper">
         <section class="slider-wrapper"> <!--слайдер из 3 позиций -->
           <ul class="slider">
-            <div class="white-block"></div>
             <ul class="slider-navigation"> <!-- UI-элемент: кружки для навигации по слайду -->
-              <li class="slider-navigation-bullet"></li>
-              <li class="slider-navigation-bullet"></li>
-              <li class="slider-navigation-bullet"></li>
+              <li class="slider-navigation-bullet first-nav-bullet  selected-bullet">
+                <button class="slider-button first-bullet" type="button" name="button"></button>
+              </li>
+              <li class="slider-navigation-bullet second-nav-bullet">
+                <button class="slider-button second-bullet" type="button" name="button"></button>
+              </li>
+              <li class="slider-navigation-bullet third-nav-bullet">
+                <button class="slider-button third-bullet" type="button" name="button"></button>
+              </li>
             </ul>
-            <li class="slider-element"> <!-- первый слайд -->
+            <li class="slider-element first-slider-element"> <!-- первый слайд -->
               <img src="img/slider-selfie-stick.png" width="384" height="486" alt="селфи-палка">
               <div class="slider-element-wrapper">
                 <span class="slider-element-number">01</span>
@@ -109,7 +115,7 @@
                   Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
                   не пропускать занятия и соблюдать диету.
                 </p>
-                <table>
+                <table class="slider-table">
                   <tr>
                     <td class="slider-table-detail">48 часов</td>
                   </tr>
@@ -131,13 +137,13 @@
                   Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
                   мощным лазером, замаскированным под стандартную камеру.
                 </p>
-                <table>
+                <table class="slider-table">
                   <tr>
                     <td class="slider-table-detail">800 м</td>
                     <td class="slider-table-detail">50 м</td>
                   </tr>
                   <tr>
-                    <td class="slider-table-detail-name">Дальность поражения</td>
+                    <td class="slider-table-detail-name">Дальность полета</td>
                     <td class="slider-table-detail-name">Радиус поражения</td>
                   </tr>
                 </table>
@@ -197,13 +203,13 @@
       <section class="services"> <!-- меню с сервисами компании -->
         <div class="wrapper services-wrapper">
           <div class="services-headings-list">
-            <button class="service-item-selector interactive-element-idle selected-button" type="button" name="button">Доставка</button>
-            <button class="service-item-selector interactive-element-idle" type="button" name="button">Гарантия</button>
-            <button class="service-item-selector interactive-element-idle" type="button" name="button">Кредит</button>
+            <button class="service-item-selector first-item-selector interactive-element-idle selected-button" type="button" name="button">Доставка</button>
+            <button class="service-item-selector second-item-selector interactive-element-idle" type="button" name="button">Гарантия</button>
+            <button class="service-item-selector third-item-selector interactive-element-idle" type="button" name="button">Кредит</button>
           </div>
           <h2 class="visually-hidden">Сервисы компании</h2> <!-- скрытый заголовок -->
            <ul class="services-list">
-             <li class="services-list-item">
+             <li class="services-list-item first-services-list-item">
                <span class="visually-hidden">Доставка</span>
                <div class="service-list-item-text-wrapper">
                  <h3 class="service-header">Доставка</h3>
@@ -215,24 +221,28 @@
                </div>
               <div class="service-image-delivery"></div>
              </li>
-             <li class="services-list-item visually-hidden">
+             <li class="services-list-item second-services-list-item visually-hidden">
                <span class="visually-hidden">Гарантия</span>
-               <h3 class="service-header">Гарантия</h3> <!-- В макете отсутствует текст для гарантии, добавил свой. -->
-               <p class="service-item-description">
-                 Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
-                  не переживайте, мы выдадим вам новый.<br>
-                  Товар, не дом, конечно же.
-              </p>
+               <div class="service-list-item-text-wrapper">
+                 <h3 class="service-header">Гарантия</h3> <!-- В макете отсутствует текст для гарантии, добавил свой. -->
+                 <p class="service-item-description">
+                   Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
+                    не переживайте, мы выдадим вам новый.<br>
+                    Товар, не дом, конечно же.
+                </p>
+              </div>
               <div class="service-image-warranty"></div>
              </li>
-             <li class="services-list-item visually-hidden">
+             <li class="services-list-item third-services-list-item visually-hidden">
                <span class="visually-hidden">Кредит</span>
-               <h3 class="service-header">Кредит</h3> <!-- В макете отсутствует текст для кредита, добавил свой. -->
-               <p class="service-item-description">
-                 Залезть в долговую яму стало проще! Кредитные консультанты<br>
-                  подберут для вас наиболее выгодные<br>
-                  условия кредита. Выгодные для нашего банка, разумеется.
-              </p>
+               <div class="service-list-item-text-wrapper">
+                 <h3 class="service-header">Кредит</h3> <!-- В макете отсутствует текст для кредита, добавил свой. -->
+                 <p class="service-item-description">
+                   Залезть в долговую яму стало проще! Кредитные консультанты<br>
+                    подберут для вас наиболее выгодные<br>
+                    условия кредита. Выгодные для нашего банка, разумеется.
+                </p>
+              </div>
               <div class="service-image-credit"></div>
              </li>
 
@@ -266,7 +276,6 @@
       </section>
       <div class="wrapper about-us-contacts-wrapper">
         <section class="about-us"> <!--Раздел "о нас" -->
-            <div class="black-block"></div>
             <h2 class="about-us-header">О нас</h2>
             <p>
               Огромный выбор гаджетов не оставит равнодушным гика,<br>
@@ -290,7 +299,6 @@
             <a class="about-us-details hover-effect interactive-element-idle" href="">Подробнее о нас</a>
         </section>
         <section class="contacts"> <!-- Раздел "Контакты" -->
-          <div class="black-block"></div>
           <h2 class="contacts-header">Контакты</h2>
           <p>
             Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете<br>
@@ -304,7 +312,7 @@
       </div>
     </main>
     <footer class="footer"> <!-- Подвал -->
-      <div class="yellow-block"></div>
+
         <div class="wrapper footer-wrapper">
           <div class="footer-row-wrapper">
             <svg class="footer-logo-device svg-fill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35" width="163" height="35" > <!--Логотип DEVICE -->
