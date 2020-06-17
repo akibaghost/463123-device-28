@@ -5,7 +5,6 @@
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
   </head>
   <body class="page-body">
     <header class="header"> <!-- шапка -->
@@ -67,18 +66,18 @@
       </div>
       <div class="wrapper">
         <section class="slider-wrapper"> <!--слайдер из 3 позиций -->
+          <ul class="slider-navigation"> <!-- UI-элемент: кружки для навигации по слайду -->
+            <li class="slider-navigation-bullet first-nav-bullet  selected-bullet">
+              <button class="slider-button first-bullet" type="button" name="button"></button>
+            </li>
+            <li class="slider-navigation-bullet second-nav-bullet">
+              <button class="slider-button second-bullet" type="button" name="button"></button>
+            </li>
+            <li class="slider-navigation-bullet third-nav-bullet">
+              <button class="slider-button third-bullet" type="button" name="button"></button>
+            </li>
+          </ul>
           <ul class="slider">
-            <ul class="slider-navigation"> <!-- UI-элемент: кружки для навигации по слайду -->
-              <li class="slider-navigation-bullet first-nav-bullet  selected-bullet">
-                <button class="slider-button first-bullet" type="button" name="button"></button>
-              </li>
-              <li class="slider-navigation-bullet second-nav-bullet">
-                <button class="slider-button second-bullet" type="button" name="button"></button>
-              </li>
-              <li class="slider-navigation-bullet third-nav-bullet">
-                <button class="slider-button third-bullet" type="button" name="button"></button>
-              </li>
-            </ul>
             <li class="slider-element first-slider-element"> <!-- первый слайд -->
               <img src="img/slider-selfie-stick.png" width="384" height="486" alt="селфи-палка">
               <div class="slider-element-wrapper">
@@ -198,8 +197,8 @@
               </a>
             </li>
           </ul>
+        </section>
       </div>
-      </section>
       <section class="services"> <!-- меню с сервисами компании -->
         <div class="wrapper services-wrapper">
           <div class="services-headings-list">
@@ -394,7 +393,8 @@
     <section class="popup-map visually-hidden"> <!-- Popup: карта -->
       <h2 class="visually-hidden">Адрес</h2> <!-- скрытый заголовок -->
       <button class="popup-map-close-button" type="button" aria-label="Закрыть карту с адресом"></button>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.9986601042947!2d37.5276830506644!3d55.68766470254616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1592136957030!5m2!1sru!2sru" width="994" height="593" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.9986601042947!2d37.5276830506644!3d55.68766470254616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1592136957030!5m2!1sru!2sru" width="994" height="593" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -371,8 +371,8 @@ a {text-decoration: none; }
 
 .slider-navigation {
   position: absolute;
-  right: 90px;
-  bottom: 138px;
+  right: 268px;
+  bottom: 172px;
   list-style: none;
   z-index: 10;
 }
@@ -635,6 +635,7 @@ a {text-decoration: none; }
   padding: 0;
   padding-top: 95px;
   padding-left: 180px;
+	padding-right: 170px;
   list-style: none;
 }
 
@@ -819,8 +820,13 @@ a {text-decoration: none; }
   list-style: none;
 }
 
+
 .footer-links-list li {
-  margin-right: 50px;
+  margin-right: 40px;
+}
+
+.footer-links-list li:nth-child(2) {
+  margin-right: 45px;
 }
 
 .footer-links-list li:last-child {
@@ -846,7 +852,7 @@ a {text-decoration: none; }
 }
 
 .footer-phone-link {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Verdana', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -904,7 +910,7 @@ a {text-decoration: none; }
 }
 
 li.login-link-unclude-position {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .footer-icon-user {
@@ -1146,7 +1152,7 @@ ul.header-links-list li.icon-position {
 
 .cost-range-value {
   margin-left: 14px;
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -1252,7 +1258,7 @@ ul.header-links-list li.icon-position {
 .product-filter-color-list li {
   margin-top: 15px;
   margin-bottom: 0;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Verdana', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -1296,7 +1302,7 @@ input:checked + .product-filter-color-list-label {
   margin-top: 17px;
   padding-left: 40px;
   height: 26px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Verdana', sans-serif;
   font-size: 14px;
   line-height: 19px;
   background-image: url(../img/radio-off.svg);
@@ -1365,7 +1371,7 @@ input:checked + .product-bluetooth-label {
 
 
 .sort-button {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Verdana', sans-serif;
   background: none;
   border: none;
   font-size: 14px;
@@ -1378,7 +1384,7 @@ input:checked + .product-bluetooth-label {
 }
 
 .catalog-navigation-wrapper {
-  margin-right: 140px;
+  margin-right: 180px;
   padding-left: 72px;
 }
 
@@ -1444,7 +1450,7 @@ input:checked + .product-bluetooth-label {
 }
 
 .popup-feedback-form input, .popup-feedback-form textarea {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Verdana', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1490,7 +1496,7 @@ input:checked + .product-bluetooth-label {
 }
 
 .popup-feedback-form label {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
@@ -1509,7 +1515,7 @@ input:checked + .product-bluetooth-label {
   border: none;
   background: none;
   background:  linear-gradient(transparent 30%, var(--special-yellow-dark) 30%, var(--special-yellow-dark) 65%, transparent 65%);
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
